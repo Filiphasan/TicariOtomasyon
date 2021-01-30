@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{511F3E7F-AD6C-48D2-AB74-1C646A363A45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TeknikServisOtomasyon</RootNamespace>
+    <AssemblyName>TeknikServisOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArizaDetay.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cariler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Departmanlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaBilgi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaDetay.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunAciklama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunAciklama.Designer.cs">
+      <DependentUpon>ArizaliUrunAciklama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunDetay.Designer.cs">
+      <DependentUpon>ArizaliUrunDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunKaydı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunKaydı.Designer.cs">
+      <DependentUpon>ArizaliUrunKaydı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArizaliUrunListesi.Designer.cs">
+      <DependentUpon>ArizaliUrunListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariIlIstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariIlIstatistik.Designer.cs">
+      <DependentUpon>CariIlIstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariListesi.Designer.cs">
+      <DependentUpon>CariListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DepartmanListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DepartmanListesi.Designer.cs">
+      <DependentUpon>DepartmanListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DovizKurları.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DovizKurları.Designer.cs">
+      <DependentUpon>DovizKurları.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaCıktı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaCıktı.Designer.cs">
+      <DependentUpon>FaturaCıktı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaKalemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaKalemi.Designer.cs">
+      <DependentUpon>FaturaKalemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaListesi.Designer.cs">
+      <DependentUpon>FaturaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaSorgulama.Designer.cs">
+      <DependentUpon>FaturaSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hakkimizda.Designer.cs">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mesajlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mesajlar.Designer.cs">
+      <DependentUpon>Mesajlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QrCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QrCode.Designer.cs">
+      <DependentUpon>QrCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rehber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rehber.Designer.cs">
+      <DependentUpon>Rehber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SatisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SatisListesi.Designer.cs">
+      <DependentUpon>SatisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YeniSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YeniSatis.Designer.cs">
+      <DependentUpon>YeniSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KategoriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KategoriListesi.Designer.cs">
+      <DependentUpon>KategoriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MarkaIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MarkaIstatistikleri.Designer.cs">
+      <DependentUpon>MarkaIstatistikleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NotListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NotListesi.Designer.cs">
+      <DependentUpon>NotListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListesi.Designer.cs">
+      <DependentUpon>PersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UrunIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UrunIstatistikleri.Designer.cs">
+      <DependentUpon>UrunIstatistikleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YeniCari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YeniCari.Designer.cs">
+      <DependentUpon>YeniCari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YeniDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YeniDepartman.Designer.cs">
+      <DependentUpon>YeniDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YeniKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YeniKategori.Designer.cs">
+      <DependentUpon>YeniKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YeniNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YeniNot.Designer.cs">
+      <DependentUpon>YeniNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YeniUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YeniUrun.Designer.cs">
+      <DependentUpon>YeniUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UrunListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UrunListesi.Designer.cs">
+      <DependentUpon>UrunListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giderler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkimizda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ilceler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Iller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kategoriler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesajlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Notlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Personeller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrunHareket.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrunKabul.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrunKategori_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrunTakip.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArizaliUrunAciklama.resx">
+      <DependentUpon>ArizaliUrunAciklama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArizaliUrunDetay.resx">
+      <DependentUpon>ArizaliUrunDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArizaliUrunKaydı.resx">
+      <DependentUpon>ArizaliUrunKaydı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArizaliUrunListesi.resx">
+      <DependentUpon>ArizaliUrunListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariIlIstatistik.resx">
+      <DependentUpon>CariIlIstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariListesi.resx">
+      <DependentUpon>CariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DepartmanListesi.resx">
+      <DependentUpon>DepartmanListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DovizKurları.resx">
+      <DependentUpon>DovizKurları.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaCıktı.resx">
+      <DependentUpon>FaturaCıktı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaKalemi.resx">
+      <DependentUpon>FaturaKalemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaListesi.resx">
+      <DependentUpon>FaturaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaSorgulama.resx">
+      <DependentUpon>FaturaSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hakkimizda.resx">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KategoriListesi.resx">
+      <DependentUpon>KategoriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MarkaIstatistikleri.resx">
+      <DependentUpon>MarkaIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mesajlar.resx">
+      <DependentUpon>Mesajlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NotListesi.resx">
+      <DependentUpon>NotListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListesi.resx">
+      <DependentUpon>PersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QrCode.resx">
+      <DependentUpon>QrCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rehber.resx">
+      <DependentUpon>Rehber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SatisListesi.resx">
+      <DependentUpon>SatisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrunIstatistikleri.resx">
+      <DependentUpon>UrunIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrunListesi.resx">
+      <DependentUpon>UrunListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YeniCari.resx">
+      <DependentUpon>YeniCari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YeniDepartman.resx">
+      <DependentUpon>YeniDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YeniKategori.resx">
+      <DependentUpon>YeniKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YeniNot.resx">
+      <DependentUpon>YeniNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YeniSatis.resx">
+      <DependentUpon>YeniSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YeniUrun.resx">
+      <DependentUpon>YeniUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Raporlar\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include=".editorconfig" />
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_collaborator_female_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_toolbox_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_combo_chart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_phone_contact_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_share_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_barcode_scanner_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_barcode_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_qr_code_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_categorize_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_product_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_account_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_investment_portfolio_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_system_report_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_as_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_note_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_customer_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Bar_Chart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reception_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_worker_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addheader_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addheader_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lookup&amp;reference_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lookup&amp;reference_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pdf_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_megaphone_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_profile_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_department_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_calculator_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_notebook_emoji_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_money_bag_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_money_bag_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_news_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_word_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_excel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_help_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_planner_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_send_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_sms_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\icons8_close_window_64px_1.png" />
+    <None Include="Resources\icons8_person_128px_3.png" />
+    <None Include="Resources\icons8_close_window_64px.png" />
+    <None Include="Resources\icons8_send_64px.png" />
+    <None Include="Resources\icons8_comments_128px_1.png" />
+    <None Include="Resources\icons8_document_header_128px.png" />
+    <None Include="Resources\icons8_person_128px.png" />
+    <None Include="Resources\icons8_person_256px_1.png" />
+    <None Include="Resources\icons8_shutdown_256px.png" />
+    <None Include="Resources\icons8_ask_question_256px.png" />
+    <None Include="Resources\icons8_complaint_256px.png" />
+    <None Include="Resources\icons8_for_you_256px.png" />
+    <None Include="Resources\icons8_Chat_Message_256px.png" />
+    <None Include="Resources\icons8_schedule_128px.png" />
+    <None Include="Resources\icons8_pdf_256px.png" />
+    <None Include="Resources\icons8_microsoft_excel_256px.png" />
+    <None Include="Resources\icons8_home_page_32px.png" />
+    <None Include="Resources\icons8_accounting_32px.png" />
+    <None Include="Resources\icons8_about_32px.png" />
+    <None Include="Resources\icons8_messaging_32px.png" />
+    <None Include="Resources\icons8_web_64px.png" />
+    <None Include="Resources\icons8_binoculars_32px.png" />
+    <None Include="Resources\icons8_folder_bills_32px.png" />
+    <None Include="Resources\icons8_qr_code_32px_1.png" />
+    <None Include="Resources\barcode2_16x16.png" />
+    <None Include="Resources\barcode2_32x32.png" />
+    <None Include="Resources\icons8_edit_property_64px.png" />
+    <None Include="Resources\icons8_edit_property_32px.png" />
+    <None Include="Resources\icons8_planner_128px2.png" />
+    <None Include="Resources\icons8_data_128px1.png" />
+    <None Include="Resources\icons8_planner_128px1.png" />
+    <None Include="Resources\icons8_customer_support_128px_11.png" />
+    <None Include="Resources\icons8_data_128px.png" />
+    <None Include="Resources\icons8_price_128px.png" />
+    <None Include="Resources\icons8_planner_128px.png" />
+    <None Include="Resources\icons8_customer_support_128px_1.png" />
+    <None Include="Resources\icons8_list_32px.png" />
+    <None Include="Resources\icons8_paid_32px.png" />
+    <None Include="Resources\icons8_man_orange_shopping_basket_64px.png" />
+    <None Include="Resources\icons8_man_orange_shopping_basket_32px.png" />
+    <None Include="Resources\icons8_header_1_128px.png" />
+    <None Include="Resources\notes_16x16.png" />
+    <None Include="Resources\notes_32x32.png" />
+    <None Include="Resources\icons8_comments_128px1.png" />
+    <None Include="Resources\icons8_name_128px2.png" />
+    <None Include="Resources\icons8_department_128px.png" />
+    <None Include="Resources\icons8_comments_128px.png" />
+    <None Include="Resources\icons8_address_128px.png" />
+    <None Include="Resources\icons8_task_128px.png" />
+    <None Include="Resources\icons8_tax_128px1.png" />
+    <None Include="Resources\icons8_tax_128px.png" />
+    <None Include="Resources\icons8_bank_building_128px.png" />
+    <None Include="Resources\icons8_city_128px1.png" />
+    <None Include="Resources\icons8_city_128px.png" />
+    <None Include="Resources\icons8_mailing_128px.png" />
+    <None Include="Resources\icons8_phone_128px.png" />
+    <None Include="Resources\icons8_name_128px1.png" />
+    <None Include="Resources\icons8_name_128px.png" />
+    <None Include="Resources\icons8_exercise_256px.png" />
+    <None Include="Resources\icons8_city_256px.png" />
+    <None Include="Resources\icons8_customer_256px.png" />
+    <None Include="Resources\icons8_blender_256px.png" />
+    <None Include="Resources\icons8_laptop_256px.png" />
+    <None Include="Resources\icons8_appliances_256px.png" />
+    <None Include="Resources\icons8_move_stock_256px.png" />
+    <None Include="Resources\icons8_no_edit_256px.png" />
+    <None Include="Resources\icons8_today_256px.png" />
+    <None Include="Resources\icons8_maintenance_256px.png" />
+    <None Include="Resources\icons8_error_256px.png" />
+    <None Include="Resources\icons8_trademark_256px.png" />
+    <None Include="Resources\icons8_sell_256px.png" />
+    <None Include="Resources\icons8_scan_stock_256px_1.png" />
+    <None Include="Resources\icons8_sorting_256px_1.png" />
+    <None Include="Resources\icons8_plus_256px.png" />
+    <None Include="Resources\icons8_plus.ico" />
+    <None Include="Resources\maxresdefault.jpg" />
+    <None Include="Resources\Toshiba-logo.jpg" />
+    <None Include="Resources\REFERANS-GÖRSELLER-12.png" />
+    <None Include="Resources\indir.png" />
+    <None Include="Resources\indir %282%29.png" />
+    <None Include="Resources\ae8f92dabdb5e2b57e59d7280051dcbc.jpg" />
+    <None Include="Resources\bosch-lifeclip-4c-left-5.jpg" />
+    <None Include="Resources\indir %281%29.png" />
+    <None Include="Resources\icons8_sorting_256px.png" />
+    <None Include="Resources\icons8_scan_stock_256px.png" />
+    <None Include="Resources\icons8_money_bag_256px.png" />
+    <None Include="Resources\icons8_money_256px.png" />
+    <None Include="Resources\icons8_company_256px.png" />
+    <None Include="Resources\icons8_product_256px.png" />
+    <None Include="Resources\icons8_close_window_256px.png" />
+    <None Include="Resources\icons8_close_window_32px.png" />
+    <None Include="Resources\icons8_broom_32px.png" />
+    <None Include="Resources\icons8_update_32px.png" />
+    <None Include="Resources\icons8_delete_bin_32px.png" />
+    <None Include="Resources\icons8_save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
